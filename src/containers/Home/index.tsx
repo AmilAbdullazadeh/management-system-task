@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 
-import { HeaderComponent, FooterComponent } from '../components';
+import { HeaderComponent, FooterComponent} from '../../components';
+import {Users, Tasks} from '../index'
 
 const { Content } = Layout;
 // import {Info} from '../components';
@@ -20,11 +21,8 @@ export const Home: React.FC<IProps> = () => {
     <StyledLayout>
       <HeaderComponent />
       <StyledContent>
-        <div
-          className='site-layout-content'
-        >
-          Content
-        </div>
+        {/*<Users />*/}
+        {/*<Tasks />*/}
       </StyledContent>
       <FooterComponent />
     </StyledLayout>

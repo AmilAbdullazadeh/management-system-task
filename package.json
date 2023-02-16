@@ -11,16 +11,35 @@
     "@types/node": "^17.0.45",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.0",
+    "antd": "^5.0.6",
+    "axios": "^1.2.1",
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "gh-pages": "^4.0.0",
+    "http": "^0.0.1-security",
+    "nodeman": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.4",
+    "react-toastify": "^9.1.1",
+    "styled-components": "^5.3.6",
+    "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start-server": "node ./server/server",
     "build": "react-scripts build",
+    "dev": "concurrently \"npm run start-server\" \"npm run start\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -41,5 +60,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^0.55.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
   }
 }
